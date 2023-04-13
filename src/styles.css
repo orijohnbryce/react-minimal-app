@@ -1,0 +1,51 @@
+* {
+    box-sizing: content-box;  /* keep borders and padding inside origin sizes */
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #444;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;  /* separate site-title from buttons  */    
+    align-items: stretch;  /* full-height of the hover-background. try compare to "center" */
+    padding: 0 1rem;   /* padding left & right with 1rem = 16px */
+    gap: 2rem;  /* gap between elements of the navbar (title and ul) */
+}
+
+.navbar a {
+    color: inherit;  /* color as for the navbar */
+    text-decoration: none;   /* remove underline from <a> links */
+                
+    padding: 0.25rem;
+    display: flex;   
+    height: 100%;
+    align-items: center; 
+}
+
+.site-title {
+    font-size: 2rem;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+
+.navbar li.active {
+    background-color: #777;
+}
+
+.navbar li:hover {
+    background-color: #999;
+}
+
+
