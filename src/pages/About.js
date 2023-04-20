@@ -2,7 +2,9 @@ import React from 'react'
 
 function About() {
   return (
-    <div>אודות</div>
+    <div style={{textAlign: 'center', fontSize: "50px"}}>
+      אודות
+    </div>
   )
 }
 

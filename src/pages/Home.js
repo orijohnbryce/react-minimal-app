@@ -2,7 +2,8 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>דף הבית</div>
+    <div style={{textAlign: 'center', fontSize: "50px"}}>
+      דף הבית</div>
   )
 }
 

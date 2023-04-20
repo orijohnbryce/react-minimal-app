@@ -18,12 +18,12 @@ body {
 
 .navbar a {
     color: inherit;  /* color as for the navbar */
-    text-decoration: none;   /* remove underline from <a> links */
-                
+    text-decoration: none;   /* remove underline from <a> links */                
     padding: 0.25rem;
     display: flex;   
     height: 100%;
     align-items: center; 
+    
 }
 
 .site-title {
@@ -45,7 +45,10 @@ body {
 }
 
 .navbar li:hover {
-    background-color: #999;
+    background-color: #999;    
+}
+.navbar a:hover {    
+    cursor: pointer;
 }
 
 
