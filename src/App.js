@@ -1,4 +1,5 @@
 import Notes from "./Notes";
+import { axiosExample } from "./client/axios-example";
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
           <h5> https://github.com/oribrook/minimalApp.git </h5>
           <h5> Branch: pagination </h5>
           <br/>
-          <h5> After setting the BE, remove those lines from App component, and un-comment the 'Notes' component </h5>
+          <h5> After setting the BE, remove those lines from App component, and uncomment the 'Notes' component </h5>
       </div>
-      
+      {/* <button onClick={axiosExample}> Axios example </button> */}
       {/* <Notes/> */}
     </div>
   );

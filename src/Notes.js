@@ -1,7 +1,6 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
-import { get_all_notes, get_notes_pagination } from "./client/notes_client";
+import {getNotesPagination} from "./client/notes_client"
 import Note from "./Note";
 import InfiniteScroll from "react-infinite-scroller";
 
@@ -18,7 +17,7 @@ function Notes() {
       <InfiniteScroll
         loadMore={async () => {
           if (hasMore) {
-            const res = await get_notes_pagination(nextPage, 10, setHasMore);
+            const res = await getNotesPagination(nextPage, 10, setHasMore);
             setNextPage((prev) => {
               return prev + 1;
             });

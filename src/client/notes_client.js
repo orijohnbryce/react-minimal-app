@@ -1,7 +1,7 @@
 import axios from "axios";
 import { SERVER_URL } from "./config";
 
-export async function get_all_notes() {
+export async function getAllNotes() {
     const url = SERVER_URL + "notes"
     
     try {
@@ -16,7 +16,7 @@ export async function get_all_notes() {
 }
 
 
-export async function get_notes_pagination(pageNum, pageSize) {
+export async function getNotesPagination(pageNum, pageSize) {
     const url = SERVER_URL + "notes_pagination" + `?page_num=${pageNum}&page_size=${pageSize}`
     
     try {
