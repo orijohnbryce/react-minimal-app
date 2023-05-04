@@ -9,22 +9,24 @@ function Notes() {
   const [nextPage, setNextPage] = useState(0);
   const [hasMore, setHasMore] = useState(true);
 
-  return (
-    <>
-      {console.log(notes)}
-      {console.log(nextPage)}
 
+  const onLoadMore = async () => {
+    const res = await getNotesPagination(nextPage, 10);
+
+    if (!res.has_more) {
+      setHasMore(false)
+    }
+    setNextPage((prev) => {
+      return prev + 1;
+    });
+    const newNotes = [...notes, ...res.data];
+    setNotes(newNotes);
+  }
+
+  return (
+    <>      
       <InfiniteScroll
-        loadMore={async () => {
-          if (hasMore) {
-            const res = await getNotesPagination(nextPage, 10, setHasMore);
-            setNextPage((prev) => {
-              return prev + 1;
-            });
-            const newNotes = [...notes, ...res.data];
-            setNotes(newNotes);
-          }
-        }}
+        loadMore={onLoadMore}
         hasMore={hasMore}
         loader={
           <div className="loader" key={0}>
