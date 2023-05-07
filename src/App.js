@@ -1,5 +1,6 @@
 import MyInfinitScroll from "./MyInfiniteScroll";
 import Notes from "./Notes";
+import NotesWithoutPagination from "./NotesWithoutPagination";
 import { axiosExample } from "./client/axios-example";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <br/>
           <h5> After setting the BE, remove those lines from App component, and uncomment the 'Notes' component </h5>
       </div>
+      {/* <NotesWithoutPagination/> */}
       {/* <MyInfinitScroll/> */}
       {/* <button onClick={axiosExample}> Axios example </button> */}
       {/* <Notes/> */}      
