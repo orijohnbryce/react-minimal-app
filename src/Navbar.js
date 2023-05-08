@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { appContext } from "./App";
 
 function Navbar() {
@@ -39,7 +39,6 @@ function Navbar() {
               מוצרים
             </a>
           </li>
-
           {!userLogged && (
             <li className={path == "/login" ? "active" : ""}>
               <a

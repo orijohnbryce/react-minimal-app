@@ -7,7 +7,9 @@ function Login() {
   const [un, setUn] = useState("");
   const [pw, setPw] = useState("");
   const [error, setError] = useState(false);
+
   const { setUserLogged, setUserName } = useContext(appContext);
+
   const nav = useNavigate();
 
   const handleSubmit = async () => {
@@ -28,12 +30,13 @@ function Login() {
         style={{
           textAlign: "center",
           border: "solid",
-          maxWidth: "30%",
+          maxWidth: "50%",
           margin: "2rem auto",
         }}
       >
+        <h4> התחברות </h4>
         <input
-          style={{ fontSize: "1.5rem" }}
+          style={{ fontSize: "1.5rem", width: '90%', margin: '3%' }}
           placeholder="enter user name"
           onChange={(e) => {
             setUn(e.target.value);
@@ -41,7 +44,7 @@ function Login() {
         />
         <br />
         <input
-          style={{ fontSize: "1.5rem" }}
+          style={{ fontSize: "1.5rem", width: '90%' }}
           type="password"
           placeholder="enter password"
           onChange={(e) => {
@@ -49,14 +52,18 @@ function Login() {
           }}
         />
         <br />
-        <button className="btn btn-primary" onClick={handleSubmit}>
-          לחץ להתחברות
-        </button>
+        <div style={{width: '90%', display:'flex', justifyContent: 'space-between', margin: '4%'}}>
+          <button className="btn btn-primary" onClick={handleSubmit}>
+            לחץ להתחברות
+          </button>
+          <button className="btn btn-secondary" onClick={()=>{nav('/signup')}}>
+            להרשמה
+          </button>
+        </div>
         <br />
         <br />
         {error && (
           <p style={{ color: "red" }}>
-            {" "}
             שם משתמש או סיסמה אינם נכונים. נסה שנית
           </p>
         )}

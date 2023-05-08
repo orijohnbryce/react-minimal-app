@@ -25,13 +25,34 @@ export async function validateToken() {
   try {
     const res = await axios.get("http://localhost:8000/check-token", {
       headers: { Authorization: `token ${token}` },
-    });    
+    });
     if (res.status == 200) {
       return res.data;
     } else {
       return false;
     }
   } catch (error) {
-    window.alert("Error checking token");
+    // window.alert("Error checking token");
+  }
+}
+
+export async function signup(un, pw, email) {
+  const data = {
+    username: un,
+    password: pw,
+    email: email,
+  };
+  try {
+    const res = await axios.post("http://localhost:8000/signup", data);
+
+    if (res.status == 200) {
+      localStorage.setItem("token", res.data.token);
+      return res.data;
+    } else {
+      window.alert("Error signup");
+      return false;
+    }
+  } catch (error) {
+    window.alert("Error signup");
   }
 }
