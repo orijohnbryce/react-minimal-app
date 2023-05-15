@@ -16,7 +16,7 @@ function Navbar() {
           }}
           className="site-title"
         >
-          Car-BnB
+          Logicode
         </a>
 
         <ul className="bar-list">
@@ -60,7 +60,15 @@ function Navbar() {
                     nav("/login");
                   }}
                 >
-                  שלום {userName} <br /> התנתק
+                  התנתק
+                </a>
+              </li>
+              <li className={path == "/login" ? "active" : ""}>
+                <a style={{ direction: 'rtl' }}
+                  disabled
+                  onClick={() => {}}
+                >
+                   שלום {userName} 
                 </a>
               </li>
             </>

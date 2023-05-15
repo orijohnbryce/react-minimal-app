@@ -7,9 +7,10 @@ body {
 }
 
 .navbar {
-    background-color: #444;
-    color: aqua;
+    background-color: #f19393;
+    color: rgb(0, 7, 7);
     display: flex;
+    font-weight: 700;
     justify-content: space-between;  /* separate site-title from buttons  */    
     align-items: stretch;  /* full-height of the hover-background. try compare to "center" */
     padding: 0 1rem;   /* padding left & right with 1rem = 16px */
@@ -41,7 +42,8 @@ body {
 
 
 .navbar li.active {
-    background-color: #777;
+    /* background-color: #777; */
+    color: aqua;
 }
 
 .navbar li:hover {
