@@ -7,7 +7,6 @@ function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const nav = useNavigate();
-
   return (
     <>
       <nav className="navbar">

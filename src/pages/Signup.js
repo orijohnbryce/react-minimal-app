@@ -11,21 +11,20 @@ function Signup() {
 
   const { setUserLogged, setUserName } = useContext(appContext);
 
-    const nav = useNavigate();
-    
-    const handleSubmit = async () => {
-        
-        if (!un | !pw | !email) {
-            setError("You must enter username password and email")
-            return
-        }
-        const res = await signup(un, pw, email)
-        setUserLogged(true)
-        setUserName(un)
-        nav("/")
-        
-        console.log(res)
+  const nav = useNavigate();
+
+  const handleSubmit = async () => {
+    if (!un | !pw | !email) {
+      setError("You must enter username password and email");
+      return;
     }
+    const res = await signup(un, pw, email);
+    if (res) {
+      setUserLogged(true);
+      setUserName(un);
+      nav("/");
+    }
+  };
 
   return (
     <div
@@ -35,8 +34,8 @@ function Signup() {
         maxWidth: "50%",
         margin: "2rem auto",
       }}
-      >
-          <h4> הרשמה </h4>
+    >
+      <h4> הרשמה </h4>
       <input
         style={{ fontSize: "1.5rem", width: "90%", margin: "3%" }}
         placeholder="enter user name"
@@ -71,7 +70,7 @@ function Signup() {
         }}
       >
         <button className="btn btn-primary" onClick={handleSubmit}>
-            להרשמה  
+          להרשמה
         </button>
         <button
           className="btn btn-secondary"
@@ -79,15 +78,12 @@ function Signup() {
             nav("/login");
           }}
         >
-                  
-                  רשום כבר? לחץ להתחברות
+          רשום כבר? לחץ להתחברות
         </button>
       </div>
       <br />
       <br />
-      {error && (
-              <p style={{ color: "red" }}> { error }</p>
-      )}
+      {error && <p style={{ color: "red" }}> {error}</p>}
     </div>
   );
 }

@@ -50,9 +50,12 @@ export async function signup(un, pw, email) {
       return res.data;
     } else {
       window.alert("Error signup");
+      console.log(res.data)
       return false;
     }
   } catch (error) {
     window.alert("Error signup");
+    console.log(error)
+    return false
   }
 }
