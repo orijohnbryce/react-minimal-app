@@ -1,12 +1,12 @@
 // import MyInfinitScroll from "./MyInfiniteScroll";
-// import Notes from "./Notes";
+import Notes from "./Notes";
 // import NotesWithoutPagination from "./NotesWithoutPagination";
 // import { axiosExample } from "./client/axios-example";
 
 function App() {
   return (
     <div>
-      <div>
+      {/* <div>
           <h1> Logicode pagination tutorial project </h1>
           <br/>
           <h5> This app should work together with BE from the following git repo: </h5>
@@ -14,11 +14,11 @@ function App() {
           <h5> Branch: pagination </h5>
           <br/>
           <h5> After setting the BE, remove those lines from App component, and uncomment the 'Notes' component </h5>
-      </div>
+      </div> */}
       {/* <NotesWithoutPagination/> */}
       {/* <MyInfinitScroll/> */}
       {/* <button onClick={axiosExample}> Axios example </button> */}
-      {/* <Notes/> */}      
+      <Notes/>      
     </div>
   );
 }
