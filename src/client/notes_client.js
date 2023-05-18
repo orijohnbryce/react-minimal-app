@@ -7,7 +7,7 @@ export async function getAllNotes() {
     try {
         const resJ = await axios.get(url)            
         // const resJ = res.json()
-        console.assert(resJ.status == 200)
+        console.assert(resJ.status === 200)
         return resJ.data
     } catch (error) {
         window.alert("Error!")
@@ -17,11 +17,13 @@ export async function getAllNotes() {
 
 
 export async function getNotesPagination(pageNum, pageSize) {
-    const url = SERVER_URL + "notes_pagination" + `?page_num=${pageNum}&page_size=${pageSize}`
+    // const url = SERVER_URL + "notes_pagination" + `?page_num=${pageNum}&page_size=${pageSize}`
+    
+    const url = `${SERVER_URL}notes_pagination?page_num=${pageNum}&page_size=${pageSize}`;
     
     try {
         const resJ = await axios.get(url)        
-        console.assert(resJ.status == 200)        
+        console.assert(resJ.status === 200)        
         return resJ.data
     } catch (error) {
         window.alert("Error!")

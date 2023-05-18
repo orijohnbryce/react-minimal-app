@@ -1,7 +1,7 @@
-import MyInfinitScroll from "./MyInfiniteScroll";
-import Notes from "./Notes";
-import NotesWithoutPagination from "./NotesWithoutPagination";
-import { axiosExample } from "./client/axios-example";
+// import MyInfinitScroll from "./MyInfiniteScroll";
+// import Notes from "./Notes";
+// import NotesWithoutPagination from "./NotesWithoutPagination";
+// import { axiosExample } from "./client/axios-example";
 
 function App() {
   return (
